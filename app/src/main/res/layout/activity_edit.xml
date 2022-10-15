@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewForEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@color/teal_700"
+        android:padding="10dp"
+        android:text="Edit your item here:"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="26dp" />
+
+    <EditText
+        android:id="@+id/editItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewForEdit"
+        android:layout_marginTop="20dp"
+        android:text="@string/editTask"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:id="@+id/showsDueDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editItem"
+        android:layout_centerHorizontal="false"
+        android:layout_marginTop="10dp"
+        android:background="@color/cardview_light_background"
+        android:text="@string/due_date_prompt_text"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/textViewForDueDate"
+        style="?android:spinnerStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/showsDueDate"
+        android:layout_marginTop="30dp"
+        android:background="@color/teal_200"
+        android:backgroundTint="#E91E63"
+        android:backgroundTintMode="add"
+        android:elevation="10dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:onClick="openDatePicker"
+        android:text="pick a due date"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+
+    <CheckBox
+        android:id="@+id/checkBoxOnEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textViewForDueDate"
+        android:layout_alignRight="@id/editedTaskButton"
+        android:elegantTextHeight="false"
+        android:text="Done?"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/editedTaskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/checkBoxOnEdit"
+        android:textSize="20sp"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/holo_blue_light"
+        android:text="@string/save"
+        android:textAllCaps="false"
+        android:textColor="@android:color/primary_text_dark" />
+
+
+
+
+</RelativeLayout>

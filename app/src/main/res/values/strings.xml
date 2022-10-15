@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">yw9pz</string>
+    <string name="title">UVA Bucket List</string>
+    <string name="new_task">Add a new item</string>
+    <string name="save">Save</string>
+    <string name="add_page_title">Add a New Bucket List Item:</string>
+    <string name="due_date_prompt_text">Due date:</string>
+    <string name="due_date_change_prompt_text">Change the due date:</string>
+    <string name="editTask">placeholder</string>
 </resources>
