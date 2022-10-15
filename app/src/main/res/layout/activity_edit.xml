@@ -54,7 +54,6 @@
         android:backgroundTintMode="add"
         android:elevation="10dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:onClick="openDatePicker"
         android:text="pick a due date"
         android:textAllCaps="false"
         android:textColor="@color/white"
@@ -68,15 +67,46 @@
         android:layout_alignBaseline="@id/textViewForDueDate"
         android:layout_alignRight="@id/editedTaskButton"
         android:elegantTextHeight="false"
+        android:onClick="dealWithFinishDate"
         android:text="Done?"
         android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/showsFinishDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewForDueDate"
+        android:layout_marginTop="30dp"
+        android:background="@color/cardview_light_background"
+        android:text="Finish date: "
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonForFinishDate"
+        style="?android:spinnerStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/showsFinishDate"
+        android:layout_marginTop="30dp"
+        android:background="@color/teal_200"
+        android:backgroundTint="#E91E63"
+        android:backgroundTintMode="add"
+        android:elevation="10dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:onClick="openDatePicker"
+        android:text="pick a finish date"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
 
     <Button
         android:id="@+id/editedTaskButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:layout_below="@id/checkBoxOnEdit"
+        android:layout_below="@id/buttonForFinishDate"
         android:textSize="20sp"
         android:layout_alignParentEnd="true"
         android:background="@android:color/holo_blue_light"

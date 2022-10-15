@@ -2,13 +2,13 @@ package edu.virginia.cs4720.bucketlist.yw9pz
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.DatePicker
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import edu.virginia.cs4720.bucketlist.yw9pz.model.BucketList
 import java.util.*
-import edu.virginia.cs4720.bucketlist.yw9pz.data.Datasource
 
 
 class AddItemActivity : AppCompatActivity() {
@@ -27,7 +27,7 @@ class AddItemActivity : AppCompatActivity() {
             calendar.set(simpleDatePicker.year, simpleDatePicker.month, simpleDatePicker.dayOfMonth)
             val due_date_in_milliseconds = calendar.timeInMillis
             val task: String = findViewById<EditText>(R.id.newTaskText).text.toString()
-            val newItem = BucketList(2, 0, task, due_date_in_milliseconds)
+            val newItem = BucketList(2, 0, task, due_date_in_milliseconds, 0)
             //Datasource().addItem(newItem)
             val intent = Intent(this, ListActivity::class.java)
             intent.putExtra(ListActivity.EXTRA_DATA, newItem)
