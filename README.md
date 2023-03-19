@@ -26,5 +26,3 @@ The edited item is shown in the list, reordered if necessary.
 
 
 
-
- 
